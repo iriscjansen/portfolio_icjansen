@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+/*CSS voor de hele body*/
+body {
+	background-color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align:center;
+	margin:0;
+}
+
+/*header en navigatie*/
+
+header{
+	background-color:black;  
+	top:0; 
+	position: sticky;   
+	padding:1em;
+}
+
+header nav ul{
+	list-style: none;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding:0;
+}
+
+header nav ul li{
+	margin:0em 3em;
+}
+
+/*animatie in hover*/
+header nav ul li::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: white;
+    display: block;
+    transition: width 0.4s;
+}
+
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+header h1{
+	font-family:'arial', sans-serif;
+	font-style:bold;
+	color:white;
+}
+
+header nav ul li a{
+	color:white;
+	text-decoration: none
+}
+
+header p{
+	color:white;
+}
+
+
+/*schoolwerk main*/
+
+main{
+	margin:2em;
+}
+
+main h1{
+	text-align:left;
+	font-family:'arial', sans-serif;
+	font-style:bold;
+}
+
+main h2{
+	text-align:left;
+	font-family:'avenir', sans-serif;
+	font-weight:600;
+}
+
+main img{
+	width:100%;
+	height:auto;
+}
+ 
+.work-grid{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 1.5em
+}
+
+main section p{
+	font-family:'avenir', sans-serif;
+	text-align:left;
+}
+
+main section button {
+	border:none;
+ 	margin:0 auto 2em;
+	padding:1em 3.5em;
+	color:white;
+	background-color:black;
+	font-weight:700;
+}
+
+main section button a{
+	color:white;
+	text-decoration: none;
+}
+
+footer{
+	background-color:black;  
+	padding:4em;
+}
+
+footer p{
+	color:white;
+}
+/*about pagina*/
+
+
+.foto_tekst{
+	max-width:60%;
+	margin:auto;
+}
+
+
+.foto_tekst img{
+	width:30%;
+	height:auto;
+	margin-right:50em;
+}
+
+
+.foto_tekst ul{
+	list-style:square;
+	font-family:'avenir', sans-serif;
+	text-align: left;
+}
+
+
+/*contact pagina*/
+
+.contactMe{
+	max-width:60%;
+	margin:auto;
+	padding:15em;
+}
+
+.contactMe ul{
+	list-style:square;
+	font-family:'avenir', sans-serif;
+	text-align: left;
+}
+
+/*schoolwerk paginas*/
+
+.schoolwerk{
+	max-width:60%;
+	margin:auto;
+}
+
+.schoolwerk a{
+	text-decoration: none;
+	color:white;
+	font-weight:700;
+	text-align:left;
+}
+
+.schoolwerk ul{
+	list-style:square;
+	font-family:'avenir', sans-serif;
+	text-align: left;
+}
+
+.schoolwerk button{
+    display: block;
+    border:none;
+    margin: 5em 0;
+	padding: 1em 3.5em;    
+    background-color:black;
+}
+
+
+/*breakpoints*/
+@media (max-width:800px){
+	.work-grid{
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1.5em
+	}
+	.foto_tekst img{
+	max-width:60%;
+	}
+}
+
+@media (max-width:1000px){
+	.contactMe{
+	padding:7em;
+	}
+}
+
+
+
